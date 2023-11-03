@@ -1,6 +1,6 @@
 import { HttpParams } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Subscription, switchMap, of, Observable, map } from 'rxjs';
 import { Fixture, FixtureResponse } from 'src/app/models/fixtures';
 import { Location } from '@angular/common';
