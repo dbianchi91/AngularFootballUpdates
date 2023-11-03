@@ -1,0 +1,46 @@
+<div class="container">
+    <ng-container *ngIf="standings">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th>Team</th>
+            <th>Played</th>
+            <th>Win</th>
+            <th>Draw</th>
+            <th>Lose</th>
+            <th>GD</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let values of standings">
+            <tr *ngFor="let standing of values">
+              <td>{{ standing?.rank }}</td>
+              <td>
+                <img
+                  [src]="standing?.team?.logo"
+                  alt="Team Logo"
+                  width="50"
+                  height="50"
+                />
+              </td>
+              <td>
+                <a [routerLink]="['/team', standing?.team?.id]">{{
+                  standing?.team?.name
+                }}</a>
+              </td>
+              <td>{{ standing?.all?.played }}</td>
+              <td>{{ standing?.all?.win }}</td>
+              <td>{{ standing?.all?.draw }}</td>
+              <td>{{ standing?.all?.lose }}</td>
+              <td>{{ standing?.goalsDiff }}</td>
+              <td>{{ standing?.points }}</td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </ng-container>
+  </div>
+  

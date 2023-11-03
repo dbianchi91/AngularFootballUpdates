@@ -1,0 +1,31 @@
+<div class="container" *ngIf="teamMatchData">
+    <div class="score-card-list">
+      <ng-container *ngFor="let match of teamMatchData">
+        <div class="score-card">
+          <span class="team">
+            <img
+              class="team-logo"
+              [src]="match?.teams?.home?.logo"
+              alt="Home Team Logo"
+            />
+            {{ match?.teams?.home?.name }}
+          </span>
+          <span class="score">
+            {{ match?.score?.fulltime?.home }} :
+            {{ match?.score?.fulltime?.away }}
+          </span>
+          <span class="team">
+            <img
+              class="team-logo"
+              [src]="match?.teams?.away?.logo"
+              alt="Away Team Logo"
+            />
+            {{ match?.teams?.away?.name }}
+          </span>
+        </div>
+      </ng-container>
+    </div>
+  
+    <button (click)="goBackToStanding()">Back to Standing</button>
+  </div>
+  

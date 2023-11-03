@@ -1,0 +1,13 @@
+<nav>
+    <ul class="navbar">
+      <li *ngFor="let country of countries">
+        <a
+          id="{{ country.name | lowercase }}Select"
+          [routerLink]="['/standings', country.id]"
+          >{{ country.name }}</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+  
