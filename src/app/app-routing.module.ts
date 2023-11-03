@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { MenuComponent } from './components/menu/menu.component';
 import { StandingComponent } from './components/standing/standing.component';
 import { TeamMatchComponent } from './components/team-match/team-match.component';
-import { PageNotFoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
   {
@@ -19,11 +18,7 @@ const routes: Routes = [
   {
     path: 'team/:teamId',
     component: TeamMatchComponent,
-  },
-  {
-    path: '**',
-    component: PageNotFoundComponent,
-  },
+  }
 ];
 
 @NgModule({
