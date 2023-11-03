@@ -9,6 +9,7 @@ import { TeamMatchComponent } from './components/team-match/team-match.component
 import { StandingService } from './services/standing.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     StandingComponent,
     MenuComponent,
-    TeamMatchComponent
+    TeamMatchComponent,
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule,
